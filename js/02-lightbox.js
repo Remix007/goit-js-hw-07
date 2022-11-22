@@ -30,5 +30,3 @@ const onlistGallaryClick = (event) => {
     captionDelay: 250,
   });
 };
-
-listGallary.addEventListener("click", onlistGallaryClick);
