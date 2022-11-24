@@ -1,8 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
 
-console.log(galleryItems);
-console.clear();
-
 // 1.Створення і рендер розмітки на підставі масиву даних galleryItems і наданого шаблону елемента галереї.
 // Використовуй готовий код з першого завдання.
 const listGallary = document.querySelector(".gallery");
@@ -19,14 +16,7 @@ const galleryArray = galleryItems.map((el) => {
 
 listGallary.insertAdjacentHTML("afterbegin", galleryArray.join(""));
 
-const onlistGallaryClick = (event) => {
-  event.preventDefault();
-  if (event.target.tagName !== "IMG") {
-    return;
-  }
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-};
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
